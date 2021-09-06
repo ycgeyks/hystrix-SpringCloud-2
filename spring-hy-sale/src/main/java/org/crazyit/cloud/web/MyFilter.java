@@ -21,6 +21,7 @@ public class MyFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
+		System.out.println("filter do it!!!!!!!");
 		HystrixRequestContext ctx = HystrixRequestContext.initializeContext();
 		try {
 			chain.doFilter(request, response);
